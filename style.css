@@ -1,0 +1,38 @@
+body {
+    --myTeal: #31A3BD;
+    --myDarkTeal: #0289A9;
+    --brown1: #F3C69F;
+    --brown2: #DA8C4E;
+    --brown3: #C16F3F;
+    --brown4: #94492E;
+    --roundedCorners: 10px;
+  }
+  
+  #start-button {
+    font-size: 30px;
+    padding: 0.5em;
+    border-radius: var(--roundedCorners);
+  }
+  
+  .letterBtn {
+    font-size: 30px;
+    padding: 2em 2.5em;
+    margin: 1em;
+    background-color: var(--brown2);
+    border-radius: var(--roundedCorners);
+  }
+  
+  .letterBtn:hover {
+    background-color: var(--brown1)
+  }
+  
+  .fillInTheBlank {
+    font-size: 48px;
+  }
+  
+  #_App {
+    padding: 10em;
+    text-align: center;
+  }
+  
+  

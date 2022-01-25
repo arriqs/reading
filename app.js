@@ -62,8 +62,7 @@ function beginExercise() {
       
       function handleUpdateBlank(e) {
         var blank = document.querySelector(".fillInTheBlank").firstChild;
-        var newBtnColor = getComputedStyle(document.body)
-    .getPropertyValue('--myTeal');
+        var newBtnColor = getComputedStyle(document.body).getPropertyValue('--myTeal');
         button.style.backgroundColor = newBtnColor;
         blank.textContent = letter;
       }
@@ -80,11 +79,20 @@ function beginExercise() {
           }, 5000);
         } 
         if (clickedBtns.length == wordBegin.length - 1) {
+          let finishDialog = document.createElement("div");
+          finishDialog.id = "finishDialog";
+          let finishDialogText = document.createElement("p");
+          finishDialogText.id = "finishDialogText";
+          let finishDialogTextContent = document.createTextNode("Congratulations! Click the button below to continue to the next exercise.");
+          finishDialogText.appendChild(finishDialogTextContent);
           let finishBtn = document.createElement("button");
+          finishBtn.id = "finishBtn";
           let finishBtnContent = document.createTextNode("Next Exercise");
           finishBtn.appendChild(finishBtnContent);
           finishBtn.addEventListener("click", clearExercise);
-          container.appendChild(finishBtn);
+          finishDialog.appendChild(finishDialogText);
+          finishDialog.appendChild(finishBtn);
+          container.appendChild(finishDialog);
         }
         setClickedBtns(e.target.id);
         console.log(clickedBtns);
